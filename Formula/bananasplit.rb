@@ -5,23 +5,23 @@ class Bananasplit < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/teotti/banana-cli/releases/download/v0.5.0/banana-darwin-arm64.tar.gz"
-      sha256 "42862823bf9314238b439222183db038afed4b371a9b09e1e2e352051c32294f"
+      url "https://github.com/teotti/banana-cli/releases/download/v0.5.1/banana-darwin-arm64.tar.gz"
+      sha256 "ce40340682be19801a907ca411639fe7a4d6c49959798e1693500f102558d1ad"
     end
     on_intel do
-      url "https://github.com/teotti/banana-cli/releases/download/v0.5.0/banana-darwin-x64.tar.gz"
-      sha256 "671041270c18196f7f3ee4dd3277dfc14944eba58e2105f4aed7e33de777fd6e"
+      url "https://github.com/teotti/banana-cli/releases/download/v0.5.1/banana-darwin-x64.tar.gz"
+      sha256 "06cd781d1e918b5074d8f29e21118fc9aef425e01610ba412b000104dcf58696"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/teotti/banana-cli/releases/download/v0.5.0/banana-linux-arm64.tar.gz"
-      sha256 "52561f6347c0403a4de7e4bb20b5705a19e0d1901e5d9d0e8427135d7357a78c"
+      url "https://github.com/teotti/banana-cli/releases/download/v0.5.1/banana-linux-arm64.tar.gz"
+      sha256 "6512eb812f0582b808e4bef3f386b3725ffb0db6d3f172bfe13ba581480d12c4"
     end
     on_intel do
-      url "https://github.com/teotti/banana-cli/releases/download/v0.5.0/banana-linux-x64.tar.gz"
-      sha256 "1b56187bd741ee5f1132b49368ea01b8be7eaefbb68f5d6060d5b13124fb4e80"
+      url "https://github.com/teotti/banana-cli/releases/download/v0.5.1/banana-linux-x64.tar.gz"
+      sha256 "f90c9f7c8a341476019b6d4eadc27a068dada10c411471dfef49dfb4b24b789e"
     end
   end
 
@@ -31,6 +31,7 @@ class Bananasplit < Formula
   end
 
   test do
-    assert_match "banana <command>", shell_output("#{bin}/bananasplit --help")
+    assert_match "banana <command>", shell_output("#{bin}/banana --help")
+    assert_match "bananasplit <command>", shell_output("#{bin}/bananasplit --help")
   end
 end
